@@ -35,7 +35,7 @@ scene.add(camera);
 // Floor
 const floor = new THREE.Mesh(
     new THREE.PlaneGeometry(2000, 2000),
-    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/grass.jpg", 250, 250, 1) })
+    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/grass.jpg", 300, 300, 1) })
 );
 floor.rotation.x = - Math.PI * 0.5;
 floor.position.y = 0;
@@ -147,7 +147,7 @@ scene.add(way5_3);
 const ambientLight = new THREE.AmbientLight('#ffffff', 0.5);
 scene.add(ambientLight);
 // Directional light
-const moonLight = new THREE.DirectionalLight('#f5eeab', 0.2);
+const moonLight = new THREE.DirectionalLight('#f5eead', 0.5);
 moonLight.position.set(4, 5, 2);
 scene.add(moonLight);
 
