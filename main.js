@@ -34,8 +34,8 @@ scene.add(camera);
 
 // Floor
 const floor = new THREE.Mesh(
-    new THREE.PlaneGeometry(2000, 2000),
-    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/grass.jpg", 300, 300, 1) })
+    new THREE.PlaneGeometry(500, 500),
+    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/grass.jpg", 150, 150, 1) })
 );
 floor.rotation.x = - Math.PI * 0.5;
 floor.position.y = 0;
@@ -144,10 +144,10 @@ way5_3.position.x = 30;
 scene.add(way5_3);
 
 // Ambient light
-const ambientLight = new THREE.AmbientLight('#ffffff', 0.5);
+const ambientLight = new THREE.AmbientLight('#ffffff', 0.6);
 scene.add(ambientLight);
 // Directional light
-const moonLight = new THREE.DirectionalLight('#f5eead', 0.5);
+const moonLight = new THREE.DirectionalLight('#f5eead', 0.6);
 moonLight.position.set(4, 5, 2);
 scene.add(moonLight);
 
@@ -194,7 +194,7 @@ house.add(door);
 
 //window
 const w1 = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(0.75, 0.7, 0),
+    new THREE.BoxBufferGeometry(1, 1, 0),
     new THREE.MeshStandardMaterial({map: window_texture})
 );
 w1.position.z = wall_z/2+0.01;
