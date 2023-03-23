@@ -9,11 +9,11 @@ function createRepeatingTexture(fileName, repeatX, repeatY, rot) {
 
 
 var textureLoader = new THREE.TextureLoader();
-var wall_texture = textureLoader.load('https://dnl03.github.io/projecttreejs/bulding_texture.jpg');
-var roof_texture = textureLoader.load('https://dnl03.github.io/projecttreejs/roof_texture.jpg');
-var door_texture = textureLoader.load('https://dnl03.github.io/projecttreejs/door.jpg');
-var background = textureLoader.load('https://dnl03.github.io/projecttreejs/background.jpg');
-var window_texture = textureLoader.load('https://dnl03.github.io/projecttreejs/window.jpg');
+var wall_texture = textureLoader.load('https://dnl03.github.io/smallcity/bulding_texture.jpg');
+var roof_texture = textureLoader.load('https://dnl03.github.io/smallcity/roof_texture.jpg');
+var door_texture = textureLoader.load('https://dnl03.github.io/smallcity/door.jpg');
+var background = textureLoader.load('https://dnl03.github.io/smallcity/background.jpg');
+var window_texture = textureLoader.load('https://dnl03.github.io/smallcity/window.jpg');
 
 const scene = new THREE.Scene();
 scene.background = background;
@@ -35,7 +35,7 @@ scene.add(camera);
 // Floor
 const floor = new THREE.Mesh(
     new THREE.PlaneGeometry(2000, 2000),
-    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/projecttreejs/grass.jpg", 250, 250, 1) })
+    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/grass.jpg", 250, 250, 1) })
 );
 floor.rotation.x = - Math.PI * 0.5;
 floor.position.y = 0;
@@ -90,7 +90,7 @@ createTree(-5, -1); createTree(-5, 13);
 //way
 const way = new THREE.Mesh(
     new THREE.PlaneGeometry(5, 30),
-    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/projecttreejs/way.jpg", 1, 3, Math.PI)})
+    new THREE.MeshStandardMaterial({ color: '#a9c388', map: createRepeatingTexture("https://dnl03.github.io/smallcity/way.jpg", 1, 3, Math.PI)})
 )
 way.rotation.x = -Math.PI *0.5;
 way.position.y = 0.01;
@@ -173,7 +173,7 @@ var roof_y = 2;
 var roof_z = 4;
 const roof = new THREE.Mesh(
     new THREE.ConeBufferGeometry(roof_x, roof_y, roof_z),
-    new THREE.MeshStandardMaterial({map: createRepeatingTexture("https://dnl03.github.io/projecttreejs/roof_texture.jpg", 10, 2, 3)})
+    new THREE.MeshStandardMaterial({map: createRepeatingTexture("https://dnl03.github.io/smallcity/roof_texture.jpg", 10, 2, 3)})
 );
 roof.position.y = wall_y + roof_y/2;
 roof.rotation.y = Math.PI /4;
